@@ -1,0 +1,376 @@
+/* Element Chalk Variables */
+/* Transition
+-------------------------- */
+/* Color
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* Dialog
+-------------------------- */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+--------------------------*/
+/* Slider
+--------------------------*/
+/* Steps
+--------------------------*/
+/* Menu
+--------------------------*/
+/* Rate
+--------------------------*/
+/* DatePicker
+--------------------------*/
+/* Loading
+--------------------------*/
+/* Scrollbar
+--------------------------*/
+/* Carousel
+--------------------------*/
+/* Collapse
+--------------------------*/
+/* Transfer
+--------------------------*/
+/* Header
+  --------------------------*/
+/* Footer
+--------------------------*/
+/* Main
+--------------------------*/
+/* Timeline
+--------------------------*/
+/* Backtop
+--------------------------*/
+/* Link
+--------------------------*/
+/* Calendar
+--------------------------*/
+/* Form
+-------------------------- */
+/* Avatar
+--------------------------*/
+/* Break-point
+--------------------------*/
+/* BEM support Func
+ -------------------------- */
+/* Element Chalk Variables */
+/* Transition
+-------------------------- */
+/* Color
+-------------------------- */
+/* 53a8ff */
+/* 66b1ff */
+/* 79bbff */
+/* 8cc5ff */
+/* a0cfff */
+/* b3d8ff */
+/* c6e2ff */
+/* d9ecff */
+/* ecf5ff */
+/* Link
+-------------------------- */
+/* Border
+-------------------------- */
+/* Fill
+-------------------------- */
+/* Typography
+-------------------------- */
+/* Size
+-------------------------- */
+/* z-index
+-------------------------- */
+/* Disable base
+-------------------------- */
+/* Icon
+-------------------------- */
+/* Checkbox
+-------------------------- */
+/* Radio
+-------------------------- */
+/* Select
+-------------------------- */
+/* Alert
+-------------------------- */
+/* MessageBox
+-------------------------- */
+/* Message
+-------------------------- */
+/* Notification
+-------------------------- */
+/* Input
+-------------------------- */
+/* Cascader
+-------------------------- */
+/* Group
+-------------------------- */
+/* Tab
+-------------------------- */
+/* Button
+-------------------------- */
+/* cascader
+-------------------------- */
+/* Switch
+-------------------------- */
+/* Dialog
+-------------------------- */
+/* Table
+-------------------------- */
+/* Pagination
+-------------------------- */
+/* Popup
+-------------------------- */
+/* Popover
+-------------------------- */
+/* Tooltip
+-------------------------- */
+/* Tag
+-------------------------- */
+/* Tree
+-------------------------- */
+/* Dropdown
+-------------------------- */
+/* Badge
+-------------------------- */
+/* Card
+--------------------------*/
+/* Slider
+--------------------------*/
+/* Steps
+--------------------------*/
+/* Menu
+--------------------------*/
+/* Rate
+--------------------------*/
+/* DatePicker
+--------------------------*/
+/* Loading
+--------------------------*/
+/* Scrollbar
+--------------------------*/
+/* Carousel
+--------------------------*/
+/* Collapse
+--------------------------*/
+/* Transfer
+--------------------------*/
+/* Header
+  --------------------------*/
+/* Footer
+--------------------------*/
+/* Main
+--------------------------*/
+/* Timeline
+--------------------------*/
+/* Backtop
+--------------------------*/
+/* Link
+--------------------------*/
+/* Calendar
+--------------------------*/
+/* Form
+-------------------------- */
+/* Avatar
+--------------------------*/
+/* Break-point
+--------------------------*/
+/* Break-points
+ -------------------------- */
+/* Scrollbar
+ -------------------------- */
+/* Placeholder
+ -------------------------- */
+/* BEM
+ -------------------------- */
+.z-dialog {
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
+.z-dialog .el-dialog__header {
+  position: relative;
+  background-color: #409EFF;
+  padding: 10px 30px;
+  min-height: 14px;
+  user-select: none;
+}
+.z-dialog .el-dialog__header .el-dialog__title {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.z-dialog .el-dialog__header .el-dialog__headerbtn {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+.z-dialog .el-dialog__header .el-dialog__headerbtn.full-screen {
+  right: 35px;
+}
+.z-dialog .el-dialog__header .el-dialog__headerbtn .el-icon {
+  color: #FFFFFF;
+}
+.z-dialog .el-dialog__body {
+  overflow: auto;
+  min-height: 300px;
+  max-height: 500px;
+  padding: 10px;
+}
+.z-dialog .el-dialog__body::-webkit-scrollbar {
+  z-index: 11;
+  width: 6px;
+}
+.z-dialog .el-dialog__body::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.z-dialog .el-dialog__body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  width: 6px;
+  background: #b4bccc;
+}
+.z-dialog .el-dialog__body::-webkit-scrollbar-corner {
+  background: #fff;
+}
+.z-dialog .el-dialog__body::-webkit-scrollbar-track {
+  background: #fff;
+}
+.z-dialog .el-dialog__body::-webkit-scrollbar-track-piece {
+  background: #fff;
+  width: 6px;
+}
+.z-dialog .el-dialog__footer {
+  height: 62px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.z-dialog.is-fullscreen {
+  height: 100vh;
+  width: 100vw;
+}
+.z-dialog.is-fullscreen.no-btn-group .el-dialog__body {
+  height: calc(100vh - 64px);
+}
+.z-dialog.is-fullscreen .el-dialog__body {
+  height: calc(100vh - 64px - 62px);
+  max-height: none;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.z-dialog.is-fullscreen .el-dialog__body::-webkit-scrollbar {
+  z-index: 11;
+  width: 6px;
+}
+.z-dialog.is-fullscreen .el-dialog__body::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+.z-dialog.is-fullscreen .el-dialog__body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  width: 6px;
+  background: #b4bccc;
+}
+.z-dialog.is-fullscreen .el-dialog__body::-webkit-scrollbar-corner {
+  background: #fff;
+}
+.z-dialog.is-fullscreen .el-dialog__body::-webkit-scrollbar-track {
+  background: #fff;
+}
+.z-dialog.is-fullscreen .el-dialog__body::-webkit-scrollbar-track-piece {
+  background: #fff;
+  width: 6px;
+}
+
+.z-card {
+  background-color: #FFFFFF;
+  border: 1px solid;
+  padding: 20px;
+  border-radius: 4px;
+}
+.z-card + .z-card {
+  margin-top: 20px;
+}
+.z-card.primary {
+  border-color: #409EFF;
+}
+.z-card.danger {
+  border-color: #F56C6C;
+}
+.z-card.success {
+  border-color: #67C23A;
+}
+.z-card.info {
+  border-color: #909399;
+}
+.z-card.warning {
+  border-color: #E6A23C;
+}
+.z-card.default {
+  border-color: #EBEEF5;
+}
