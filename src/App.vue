@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <el-button type="primary" @click="handleOpen">打开弹窗</el-button>
-    <ZDialog ref="dialog"></ZDialog>
+    <ZButton @click="handleSubmit" type="primary">提交</ZButton>
   </div>
 </template>
 
@@ -16,6 +15,12 @@ export default {
   methods: {
     handleOpen () {
       this.$refs['dialog'].open()
+    },
+    handleSubmit (loading, done, e) {
+      loading()
+      setTimeout(() => {
+        done()
+      }, 1000);
     }
   },
   created () {

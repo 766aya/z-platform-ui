@@ -7,7 +7,7 @@
     :plain="plain"
     :round="round"
     :circle="circle"
-    :loading="loading"
+    :loading="Loading"
     :disabled="disabled"
     :autofocus="autofocus"
     :nativeType="nativeType"
@@ -21,6 +21,16 @@
 <script>
 export default {
   name: "ZButton",
+  data () {
+    return {
+      Loading: this.loading
+    }
+  },
+  watch: {
+    loading (loading) {
+      this.Loading = loading
+    }
+  },
   props: {
     size: String, // 尺寸
     type: { // 类型
@@ -44,7 +54,13 @@ export default {
   },
   methods: {
     handleClick (e) {
-      this.$emit('click', e)
+      this.$emit('click', this.handleLoading, this.handleDone, e)
+    },
+    handleLoading () {
+      this.Loading = true
+    },
+    handleDone () {
+      this.Loading = false
     }
   }
 }

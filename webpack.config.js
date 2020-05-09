@@ -7,7 +7,7 @@ module.exports = {
   entry: NODE_ENV == 'development' ? './src/main.js' : './src/build.js',
   output: {
     path: path.resolve(__dirname, './lib'),
-    publicPath: '/dist/',
+    publicPath: '/lib/',
     filename: 'index.js',
     library: 'zplatformui',
     libraryTarget: 'umd',
