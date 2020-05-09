@@ -1,5 +1,12 @@
 import { dateFormat as df } from "../util/date"
 
+/**
+ * 货币显示格式化
+ * @param {[Number, String]} val 值
+ * @param {String} prefix 前缀
+ * @param {String} suffix 后缀
+ * @param {Number}} precision 精度
+ */
 function priceFilter(val, prefix = '', suffix = '', precision = 2) {
   if (val) {
     return `${prefix}${Number(val).toFixed(precision)}${suffix}`
@@ -8,6 +15,11 @@ function priceFilter(val, prefix = '', suffix = '', precision = 2) {
   }
 }
 
+/**
+ * 时间日期格式化
+ * @param {Date} val 值
+ * @param {String} format 格式化字符串
+ */
 function dateFormat(val, format) {
   return df(val, format)
 }
@@ -20,7 +32,15 @@ function repeatStr(str, count) {
   return text
 }
 
-function replaceStr(str, regArr, type, replaceText = '*') {
+/**
+ * 字符串密文显示
+ * @param {String} val 值
+ * @param {Array} regArr 格式化数组 起始下标 中间长度 结束长度
+ * @param {Number} type 0-前后格式化 1-中间格式化 
+ * @param {String} replaceText 替换文本
+ */
+function replaceStr(val, regArr, type, replaceText = '*') {
+  let str = val.toString()
   let regtext = ''
   let Reg = null
   //repeatStr是在上面定义过的（字符串循环复制），大家注意哦
@@ -48,8 +68,8 @@ function replaceStr(str, regArr, type, replaceText = '*') {
   }
 }
 
-export default [
+export default {
   priceFilter,
   dateFormat,
   replaceStr,
-]
+}

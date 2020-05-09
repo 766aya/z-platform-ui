@@ -133,3 +133,24 @@ export function getAge(birthday, type = 1) {
   }
   return $age;
 }
+
+/**
+ * 获取本周日期数组
+ * @param {*} current 
+ */
+export function getWeekDates (current = 0) {
+  let currentDate = dateFormat(new Date(), 'yyyy/MM/dd')
+  var new_Date = new Date(new Date(currentDate).getTime() + 60*60*24*1000*7 * current)
+  var timesStamp = new_Date.getTime()
+  var currenDay = new_Date.getDay()
+  var dates = []
+  for(var i = 0; i < 7; i++) {
+    let date = new Date(timesStamp + 24 * 60 * 60 * 1000 * (i - (currenDay + 6) % 7))
+    let result = date
+    result.strDate = dateFormat(date, 'yyyy-MM-dd')
+    dates.push(result)
+  }
+  dates.__proto__.startDate = dates[0]
+  dates.__proto__.endDate = dates[dates.length - 1]
+  return dates
+}
