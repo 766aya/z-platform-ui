@@ -11,6 +11,8 @@
     :disabled="disabled"
     :autofocus="autofocus"
     :nativeType="nativeType"
+    v-if="!permission ? true : permissions.includes(permission)"
+    @click="handleClick"
   >
     <slot></slot>
   </el-button>
@@ -33,7 +35,17 @@ export default {
     icon: String, // 图标类名
     autofocus: Boolean, // 是否默认聚焦
     nativeType: String, // 原生 type 属性
-    permissions: String, // 权限标识
+    permission: String, // 权限标识
+  },
+  computed: {
+    permissions () {
+      return this.$store.getters.permissions || []
+    }
+  },
+  methods: {
+    handleClick (e) {
+      this.$emit('click', e)
+    }
   }
 }
 </script>
