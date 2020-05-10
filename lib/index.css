@@ -248,6 +248,14 @@
  -------------------------- */
 /* BEM
  -------------------------- */
+body {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .z-dialog {
   top: 50%;
   transform: translateY(-50%);
@@ -373,4 +381,33 @@
 }
 .z-card.default {
   border-color: #EBEEF5;
+}
+
+.z-control-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.z-control-bar .title-layout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  line-height: 14px;
+  user-select: none;
+}
+.z-control-bar .title-layout .total {
+  color: #909399;
+  font-size: 12px;
+  margin-left: 10px;
+  line-height: inherit;
+  vertical-align: bottom;
+}
+.z-control-bar .title-layout::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 1em;
+  background: #409EFF;
+  margin-right: 5px;
+  border-radius: 3px;
 }

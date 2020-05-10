@@ -1,6 +1,14 @@
 @import "var.scss";
 @import 'mixins.scss';
 
+body {
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .z-dialog {
   top: 50%;
   transform: translateY(-50%);
@@ -102,5 +110,37 @@
 
   &.default {
     border-color: #EBEEF5;
+  }
+}
+
+.z-control-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .title-layout {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    line-height: 14px;
+    user-select: none;
+
+    .total {
+      color: $--color-info;
+      font-size: 12px;
+      margin-left: 10px;
+      line-height: inherit;
+      vertical-align: bottom;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 1em;
+      background: $--color-primary;
+      margin-right: 5px;
+      border-radius: 3px;
+    }
   }
 }

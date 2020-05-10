@@ -1,6 +1,13 @@
 {
   "name": "z-platform-ui",
-  "description": "A Vue.js project",
+  "description": "后台项目通用组件方法集合",
+  "keywords": [
+    "vue",
+    "javascript",
+    "utils",
+    "common components",
+    "avue components"
+  ],
   "version": "1.1.2",
   "author": "周庆强 <1494233259@qq.com>",
   "license": "MIT",

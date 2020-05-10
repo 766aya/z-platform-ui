@@ -1,18 +1,29 @@
 # z-platform-ui
+> 后台项目通用组件方法集合
 
-> A Vue.js project
+# 调试方式启动
 
-## Build Setup
-
-``` bash
-# install dependencies
+```bash
 npm install
 
-# serve with hot reload at localhost:8080
 npm run dev
-
-# build for production with minification
-npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# 在自己项目中引用
+
+## 项目根目录运行
+```
+npm install element-ui z-platform-ui --save
+```
+## main.js加入如下代码
+```
+import ElementUI from "element-ui"
+import ZPlatformUI from "z-platform-ui"
+import "element-ui/lib/theme-chalk/index.css"
+import "z-platform-ui/lib/index.css"
+
+Vue.use(ElementUI, {
+  size: 'small'
+})
+Vue.use(ZPlatformUI)
+```

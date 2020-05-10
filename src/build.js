@@ -1,5 +1,6 @@
 import ZButton from "./components/z-button/index"
 import ZCard from "./components/z-card/index"
+import ZControlBar from "./components/z-control-bar/index"
 import ZDialog from "./components/z-dialog/index"
 
 import { dateFormat, calcDate, getAge, getWeekDates } from "./util/date"
@@ -22,6 +23,7 @@ export const utils = {
 const components = [
   ZButton,
   ZCard,
+  ZControlBar,
   ZDialog
 ]
 
@@ -47,6 +49,7 @@ export default {
   install,
   ZButton,
   ZCard,
+  ZControlBar,
   ZDialog,
   ...utils
 }
