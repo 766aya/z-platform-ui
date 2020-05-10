@@ -387,6 +387,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 15px;
 }
 .z-control-bar .title-layout {
   flex: 1;
@@ -410,4 +411,9 @@ body {
   background: #409EFF;
   margin-right: 5px;
   border-radius: 3px;
+}
+
+.z-crud {
+  margin: 0;
+  width: 100%;
 }
