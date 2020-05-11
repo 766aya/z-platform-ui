@@ -33,7 +33,7 @@
           :key="item.fn"
           :type="item.type"
           :class="item.icon"
-          :loading="item.fn !== 'handleCancel' ? loading : false"
+          :loading="item.fn !== 'handleCancel' ? LOADING : false"
           @click="handleClick(item)">
           {{ item.label }}
         </el-button>
@@ -49,7 +49,7 @@ export default {
     return {
       dialogVisible: false,
       FullScreen: this.fullscreen,
-      loading: false
+      LOADING: false
     }
   },
   props: {
@@ -147,13 +147,13 @@ export default {
       if (btn.fn === 'handleCancel') {
         this.dialogVisible = false
       }
-      this.$emit(btn.fn, this.handleLoading, this.handleDone)
+      this.$emit(btn.fn, null, this.done)
     },
-    handleLoading () {
-      this.loading = true
+    loading () {
+      this.LOADING = true
     },
-    handleDone () {
-      this.loading = false
+    done () {
+      this.LOADING = false
     },
     handleDialogStatusChange (status) {
       this.$emit(status)

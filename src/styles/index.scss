@@ -43,7 +43,6 @@ body {
 
   .el-dialog__body {
     overflow: auto;
-    min-height: 300px;
     max-height: 500px;
     padding: 10px;
     @include scroll-bar;

@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const NODE_ENV = process.env.NODE_ENV;
 
 module.exports = {
-  entry: NODE_ENV == 'development' ? './src/main.js' : './src/build.js',
+  entry: NODE_ENV == 'development' ? './src/demo/main.js' : './src/build.js',
   output: {
     path: path.resolve(__dirname, './lib'),
     publicPath: '/lib/',

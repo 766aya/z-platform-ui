@@ -71,6 +71,15 @@ export default {
     },
     handleSubmit (value, loading, done) {
       this.$emit('submit', value, loading, done)
+    },
+    loading () {
+      this.$refs['form'].allDisabled = true
+    },
+    done () {
+      this.$refs['form'].allDisabled = false
+    },
+    resetForm () {
+      this.$refs['form'].resetForm()
     }
   }
 }

@@ -3,6 +3,7 @@ import ZCard from "./components/z-card/index"
 import ZControlBar from "./components/z-control-bar/index"
 import ZCrud from "./components/z-crud/index"
 import ZDialog from "./components/z-dialog/index"
+import ZForm from "./components/z-form/index"
 
 import { dateFormat, calcDate, getAge, getWeekDates } from "./util/date"
 import { getStore, setStore, removeStore, getAllStore, clearStore } from "./util/store"
@@ -26,7 +27,8 @@ const components = [
   ZCard,
   ZControlBar,
   ZCrud,
-  ZDialog
+  ZDialog,
+  ZForm
 ]
 
 export function install(Vue, opts = {}) {
@@ -54,5 +56,6 @@ export default {
   ZControlBar,
   ZCrud,
   ZDialog,
+  ZForm,
   ...utils
 }
