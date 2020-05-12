@@ -1,6 +1,7 @@
 <template>
   <ZDialog ref="dialog" :title="titles[status]" @handleSubmit="handleSubmit" @closed="handleClosed">
     <ZForm ref="form" v-model="formData" :option="formOption" @submit="handleSubmit"></ZForm>
+    <ZDetail v-model="formData" :option="formOption"></ZDetail>
   </ZDialog>
 </template>
 

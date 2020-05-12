@@ -2,6 +2,7 @@ import ZButton from "./components/z-button/index"
 import ZCard from "./components/z-card/index"
 import ZControlBar from "./components/z-control-bar/index"
 import ZCrud from "./components/z-crud/index"
+import ZDetail from "./components/z-detail/index"
 import ZDialog from "./components/z-dialog/index"
 import ZForm from "./components/z-form/index"
 
@@ -27,6 +28,7 @@ const components = [
   ZCard,
   ZControlBar,
   ZCrud,
+  ZDetail,
   ZDialog,
   ZForm
 ]
@@ -55,6 +57,7 @@ export default {
   ZCard,
   ZControlBar,
   ZCrud,
+  ZDetail,
   ZDialog,
   ZForm,
   ...utils

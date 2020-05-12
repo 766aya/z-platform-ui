@@ -1,5 +1,15 @@
 <template>
-  <avue-form ref="form" class="z-form" v-model="formData" :option="option" @submit="handleSubmit"></avue-form>
+  <avue-form
+    ref="form"
+    class="z-form"
+    v-model="formData"
+    :option="option"
+    :upload-before="uploadBefore"
+    :upload-after="uploadAfter"
+    :upload-delete="uploadDelete"
+    :upload-preview="uploadPreview"
+    @submit="handleSubmit">
+  </avue-form>
 </template>
 
 <script>
@@ -27,7 +37,23 @@ export default {
     value: {
       type: Object,
       required: true,
-    }
+    },
+    uploadBefore: {
+      type: Function,
+      default: () => {}
+    },
+    uploadAfter: {
+      type: Function,
+      default: () => {}
+    },
+    uploadDelete: {
+      type: Function,
+      default: () => {}
+    },
+    uploadPreview: {
+      type: Function,
+      default: () => {}
+    },
   },
   computed: {
     column () {

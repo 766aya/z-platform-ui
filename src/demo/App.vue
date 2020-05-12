@@ -6,6 +6,7 @@
       </ZControlBar>
       <ZCrud :data="mainTableData" :option="crudOption" :page="pagination">
         <template slot="menu" slot-scope="scope">
+          <ZButton type="text" @click="handleView(scope.row)">查看</ZButton>
           <ZButton type="text" @click="handleUpdate(scope.row)">编辑</ZButton>
           <ZButton type="text" @click="handleDelete(scope.row)">删除</ZButton>
         </template>
@@ -47,6 +48,9 @@ export default {
     },
     handleDelete(scope) {
       console.log(scope)
+    },
+    handleView (data) {
+      this.$refs['mainDialog'].open({...data}, 'detail')
     },
     // 新增 - 打开弹窗
     handleCreate () {
